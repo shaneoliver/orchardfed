@@ -1,13 +1,30 @@
 .section-1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, minmax(200px, auto));
-  gap: $spacer;
-  grid-template-areas:
-    "portrait landscape-one copy"
-    "portrait landscape-two copy";
-
   margin-bottom: 4rem;
+
+  > * {
+    margin-bottom: $spacer;
+  }
+
+  @include breakpoint-up("md") {
+    display: grid;
+    gap: $spacer;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "portrait portrait"
+      "landscape-one landscape-two"
+      "copy copy";
+
+    > * {
+      margin-bottom: 0;
+    }
+  }
+  @include breakpoint-up("xl") {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-template-areas:
+      "portrait landscape-one copy"
+      "portrait landscape-two copy";
+  }
 
   .portrait {
     grid-area: portrait;

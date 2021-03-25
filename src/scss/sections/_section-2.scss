@@ -11,8 +11,9 @@
   }
   .article-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $spacer;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: $spacer;
+    row-gap: $spacer * 3;
   }
   .article {
     &__thumbnail {
