@@ -1,0 +1,40 @@
+.modal-is-open {
+  overflow-y: hidden; // Disable scrolling when modal open
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba($dark, 0.5);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  padding: 1rem;
+  transform: translate(-50%, -50%);
+  background-color: $light;
+  z-index: 10;
+
+  &__content {
+    width: 600px;
+    max-width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: scroll;
+  }
+
+  img {
+    display: block;
+  }
+
+  &--open {
+    display: block;
+  }
+}
