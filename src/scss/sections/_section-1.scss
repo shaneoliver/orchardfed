@@ -9,10 +9,6 @@
 
   margin-bottom: 4rem;
 
-  > * {
-    border: 1px solid $light;
-  }
-
   .portrait {
     grid-area: portrait;
   }
@@ -22,7 +18,44 @@
   .landscape-two {
     grid-area: landscape-two;
   }
+  .landscape-one,
+  .landscape-two {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   .copy {
     grid-area: copy;
+
+    .primary {
+      margin-bottom: 2rem;
+      font-weight: 300;
+
+      &__heading {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-decoration: underline;
+      }
+      &__content {
+        font-size: 1.125rem;
+        line-height: 1.5;
+      }
+    }
+    .supplementary {
+      &__heading {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        color: $red;
+        text-transform: uppercase;
+      }
+      &__content {
+        font-weight: bold;
+        line-height: 1.5;
+      }
+    }
   }
 }

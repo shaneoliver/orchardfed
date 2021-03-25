@@ -1,10 +1,65 @@
 .section-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: $spacer;
-
+  &__header {
+    margin-bottom: 4rem;
+  }
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacer;
+  }
   .article {
-    border: 1px solid $light;
-    padding: 1rem;
+    &__thumbnail {
+      display: block;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border-bottom: 4px solid $red;
+      img {
+        transition: transform 0.3s ease;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__title {
+      a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &__excerpt {
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    &__link {
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      position: relative;
+      text-transform: uppercase;
+      color: $light;
+      text-decoration: none;
+      font-weight: bold;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $red;
+      }
+    }
   }
 }
