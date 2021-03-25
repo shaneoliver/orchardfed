@@ -1,0 +1,11 @@
+.container {
+  @include container();
+}
+
+@each $breakpoint, $max-width in $containers {
+  @include breakpoint-up($breakpoint, $breakpoints) {
+    .container {
+      max-width: $max-width;
+    }
+  }
+}

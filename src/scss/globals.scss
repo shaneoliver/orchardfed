@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 4rem 0;
+  background-color: $dark;
+  color: $light;
+  font-size: $font-size;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

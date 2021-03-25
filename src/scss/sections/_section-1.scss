@@ -1,0 +1,28 @@
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(200px, auto));
+  gap: $spacer;
+  grid-template-areas:
+    "portrait landscape-one copy"
+    "portrait landscape-two copy";
+
+  margin-bottom: 4rem;
+
+  > * {
+    border: 1px solid $light;
+  }
+
+  .portrait {
+    grid-area: portrait;
+  }
+  .landscape-one {
+    grid-area: landscape-one;
+  }
+  .landscape-two {
+    grid-area: landscape-two;
+  }
+  .copy {
+    grid-area: copy;
+  }
+}

@@ -1,1 +1,9 @@
 @import "~/node_modules/normalize.css/normalize.css";
+
+@import "variables";
+@import "mixins";
+@import "functions";
+@import "container";
+@import "globals";
+@import "sections/section-1";
+@import "sections/section-2";
